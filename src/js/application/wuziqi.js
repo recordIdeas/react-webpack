@@ -64,6 +64,8 @@ export default function Game() {
 }
 
 const HistoryList = memo(({ history, currentMove, jumpTo }) => {
+  console.log(currentMove);
+
   const [isAscending, setIsAscending] = useState(true);
 
   const moves = history.length === 1 ? null : history.map((item, move) => {
