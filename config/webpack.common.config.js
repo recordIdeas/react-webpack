@@ -36,6 +36,7 @@ module.exports = {
       },
       {
         test: /\.less$/i,
+        exclude: path.resolve(__dirname, '../node_modules'),
         use: [
           {
             loader: 'style-loader', // 从 JS 中创建样式节点
@@ -46,7 +47,7 @@ module.exports = {
           {
             loader: 'less-loader', // 编译 Less 为 CSS
           },
-        ],
+        ]
       },
     ],
   },

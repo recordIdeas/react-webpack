@@ -8,8 +8,8 @@ const setMPA = () =>{
 
     console.log(entryFiles)
     Object.keys(entryFiles).map(index=>{
-        const entryFile = entryFiles[index];
-        const match = entryFile.match(/src\\page\\(.*)\.js/);// 匹配到文件名
+        const entryFile = entryFiles[index].replace(/\\/g, '/');
+        const match = entryFile.match(/src\/page\/(.*)\.js/);// 匹配到文件名
         const pageName = match && match[1];
 
         if(pageName) {
